@@ -15,7 +15,6 @@ function MemberFactory() {
     return member;
   };
 }
-
 const SimpleMembership = function (name) {
   this.name = name;
   this.cost = "$5";
@@ -25,22 +24,17 @@ const StandardMembership = function (name) {
   this.name = name;
   this.cost = "$15";
 };
-
 const SuperMembership = function (name) {
   this.name = name;
   this.cost = "$25";
 };
-
 const members = [];
 const factory = new MemberFactory();
-
 members.push(factory.createMember("abdou chakhkhar", "simple"));
 members.push(factory.createMember("chanko hatim", "super"));
 members.push(factory.createMember("hamid k3ik3at", "simple"));
 members.push(factory.createMember("el garni younes", "standard"));
-
 //console.log(members);
-
 members.forEach((member) => {
   member.define();
 });
